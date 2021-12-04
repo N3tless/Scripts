@@ -30,7 +30,7 @@ function rainb(hue)
     end
 end
 
-Chillmusic = Instance.new("Sound", workspace)
+Chillmusic = Instance.new("Sound", char)
 Chillmusic.Parent = game.Chat
 Chillmusic.Volume = 3
 Chillmusic.SoundId = "rbxassetid://5316365664" --1221694420
