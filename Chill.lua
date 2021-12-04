@@ -81,7 +81,7 @@ while wait(2) do
 end
 end)
 v.Shape = "Block"
-text.Text = "~Â»Chill AfÂ«~"
+text.Text = "~»Chill Af«~"
 Player = game:GetService("Players").LocalPlayer
 Character = Player.Character
 PlayerGui = Player.PlayerGui
@@ -644,7 +644,7 @@ Chill_Gui_Label.BorderSizePixel = 0
 Chill_Gui_Label.Draggable = true
 Chill_Gui_Label.Size = UDim2.new(0, 250, 0, 45)
 Chill_Gui_Label.Font = Enum.Font.Arcade
-Chill_Gui_Label.Text = "~Â»Chill GuiÂ«~"
+Chill_Gui_Label.Text = "~»Chill Gui«~"
 Chill_Gui_Label.TextColor3 = Color3.new(1, 1, 1)
 Chill_Gui_Label.TextScaled = true
 Chill_Gui_Label.TextSize = 14
@@ -775,7 +775,7 @@ Chat_Toggle_Label.BorderColor3 = Color3.new(1, 1, 1)
 Chat_Toggle_Label.Position = UDim2.new(0.540000021, 0, 5.26666689, 0)
 Chat_Toggle_Label.Size = UDim2.new(0, 94, 0, 35)
 Chat_Toggle_Label.Font = Enum.Font.Arcade
-Chat_Toggle_Label.Text = "~Â»FalseÂ«~"
+Chat_Toggle_Label.Text = "~»False«~"
 Chat_Toggle_Label.TextColor3 = Color3.new(1, 1, 1)
 Chat_Toggle_Label.TextScaled = true
 Chat_Toggle_Label.TextSize = 14
@@ -789,7 +789,7 @@ Current_Song_Label.BorderColor3 = Color3.new(1, 1, 1)
 Current_Song_Label.Position = UDim2.new(0.0520000011, 0, 6.64444447, 0)
 Current_Song_Label.Size = UDim2.new(0, 225, 0, 35)
 Current_Song_Label.Font = Enum.Font.Arcade
-Current_Song_Label.Text = "~Â»Current Song: NoneÂ«~"
+Current_Song_Label.Text = "~»Current Song: None«~"
 Current_Song_Label.TextColor3 = Color3.new(1, 1, 1)
 Current_Song_Label.TextScaled = true
 Current_Song_Label.TextSize = 14
@@ -801,10 +801,10 @@ if tonumber(ID_Box.Text) then
 	Chillmusic.SoundId='rbxassetid://'..tonumber(ID_Box.Text)
 	Chillmusic:Play()
 	currentsong = game:GetService("MarketplaceService"):GetProductInfo(tonumber(ID_Box.Text)).Name
-	text.Text = "~Â»Chill AfÂ«~ Now Playing: "..currentsong
-	Current_Song_Label.Text = "~Â»Current Song: "..currentsong.."Â«~"
+	text.Text = "~»Chill Af«~ Now Playing: "..currentsong
+	Current_Song_Label.Text = "~»Current Song: "..currentsong.."«~"
 wait(4)
-text.Text = "~Â»Fell Apart AFÂ«~"
+text.Text = "~»Fell Apart AF«~"
 end
 end)
 local ischatting = false
@@ -821,24 +821,24 @@ end)
 
 Set_Text_Button.MouseButton1Down:Connect(function()
 
-	text.Text = "~Â»"..Tpos_Box_2.Text.."Â«~"
+	text.Text = "~»"..Tpos_Box_2.Text.."«~"
 end)
 
 Toggle_Chat_Button.MouseButton1Down:Connect(function()
 if ischatting == false then
 ischatting = true
-Chat_Toggle_Label.Text = "~Â»TrueÂ«~"
+Chat_Toggle_Label.Text = "~»True«~"
 spawn(function()
 game.Players.LocalPlayer.Chatted:connect(function(msg)
 for i = 0, msg:len(), 1 do
-	text.Text = "~Â»"..msg:sub(0, i).."Â«~"
+	text.Text = "~»"..msg:sub(0, i).."«~"
 end
 wait(3)
-text.Text = "~Â»Fell Apart AFÂ«~"
+text.Text = "~»Fell Apart AF«~"
 end)
 end)
 else
 ischatting = false
-Chat_Toggle_Label.Text = "~Â»FalseÂ«~"
+Chat_Toggle_Label.Text = "~»False«~"
 end
 end)
